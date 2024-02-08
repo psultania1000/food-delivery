@@ -27517,7 +27517,7 @@ parcelHelpers.export(exports, "CDN_URL", ()=>CDN_URL);
 parcelHelpers.export(exports, "LOGO_URL", ()=>LOGO_URL);
 parcelHelpers.export(exports, "MENU_API", ()=>MENU_API);
 const CDN_URL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
-const LOGO_URL = "https://images-platform.99static.com//fubAYS04oLlAJjVkhcWNohrb9vM=/0x0:2000x2000/fit-in/590x590/99designs-contests-attachments/134/134614/attachment_134614289";
+const LOGO_URL = "https://i.pinimg.com/736x/f8/0a/2e/f80a2e48788ee23740c5becaa96b9195.jpg";
 const MENU_API = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId=";
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
@@ -35311,7 +35311,7 @@ const Body = ()=>{
         fetchData();
     }, []);
     const fetchData = async ()=>{
-        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+        const data = await fetch("https://proxy.cors.sh/https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.96340&lng=77.58550&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
         const jsonData = await data.json();
         console.log("Here comes the data", jsonData);
         setListOfRestaurant(jsonData.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
@@ -36499,7 +36499,7 @@ const Shimmer = ()=>{
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "shimmer-card m-4 h-28 p-4 w-56  bg-gray-100 hover:bg-gray-200",
+                    className: "shimmer-card m-4 h-[400px] p-4 w-56  bg-gray-100 hover:bg-gray-200",
                     children: "Cards"
                 }, void 0, false, {
                     fileName: "src/components/Shimmer.js",
@@ -36507,7 +36507,7 @@ const Shimmer = ()=>{
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "shimmer-card m-4 h-28 p-4 w-56  bg-gray-100 hover:bg-gray-200",
+                    className: "shimmer-card m-4 h-[400px] p-4 w-56  bg-gray-100 hover:bg-gray-200",
                     children: "Cards"
                 }, void 0, false, {
                     fileName: "src/components/Shimmer.js",

@@ -5,10 +5,10 @@ const Shimmer = () => {
         <div className="shimmer-card m-4 h-[400px] p-4 w-56  bg-gray-100 hover:bg-gray-200">
           Cards
         </div>
-        <div className="shimmer-card m-4 h-28 p-4 w-56  bg-gray-100 hover:bg-gray-200">
+        <div className="shimmer-card m-4 h-[400px] p-4 w-56  bg-gray-100 hover:bg-gray-200">
           Cards
         </div>
-        <div className="shimmer-card m-4 h-28 p-4 w-56  bg-gray-100 hover:bg-gray-200">
+        <div className="shimmer-card m-4 h-[400px] p-4 w-56  bg-gray-100 hover:bg-gray-200">
           Cards
         </div>
       </div>
