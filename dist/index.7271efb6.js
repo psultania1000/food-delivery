@@ -3044,7 +3044,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 }, undefined)
             },
             {
-                path: "/home",
+                path: "/body",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
                     lineNumber: 51,
@@ -27381,7 +27381,7 @@ const Header = ()=>{
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             className: "px-4",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                to: "/home",
+                                to: "/body",
                                 children: "Home"
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
@@ -35312,10 +35312,10 @@ const Body = ()=>{
     }, []);
     const fetchData = async ()=>{
         const data = await fetch("https://proxy.cors.sh/https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.96340&lng=77.58550&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
-        const jsonData = await data.json();
-        console.log("Here comes the data", jsonData);
-        setListOfRestaurant(jsonData.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
-        setfilteredRestaurant(jsonData.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
+        const jsonData1 = await data.json();
+        console.log("Here comes the data", jsonData1);
+        setListOfRestaurant(jsonData1.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
+        setfilteredRestaurant(jsonData1.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
     };
     const onlineStatus = (0, _useOnlineStatusDefault.default)();
     if (onlineStatus == false) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -35355,11 +35355,11 @@ const Body = ()=>{
                                 className: "px-4 py-1 bg-green-100 m-4 rounded-lg",
                                 // className="btn btn-primary"
                                 onClick: ()=>{
-                                    console.log("Here", {
-                                        searchText
-                                    });
                                     const searchedList = listOfRestaurant.filter((res)=>res.info.name.toLowerCase().includes(searchText.toLowerCase()));
                                     setfilteredRestaurant(searchedList);
+                                },
+                                onChange: ()=>{
+                                    setListOfRestaurant(jsonData.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
                                 },
                                 children: "Search"
                             }, void 0, false, {
@@ -35380,17 +35380,17 @@ const Body = ()=>{
                             onClick: ()=>{
                                 let newList = listOfRestaurant;
                                 newList = newList.filter((goodList)=>goodList.info.avgRating > 4.3);
-                                setListOfRestaurant(newList);
+                                setfilteredRestaurant(newList);
                             },
                             children: "Top Rated Restaurants"
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 80,
+                            lineNumber: 84,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 79,
+                        lineNumber: 83,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35400,7 +35400,7 @@ const Body = ()=>{
                                 children: "UserName"
                             }, void 0, false, {
                                 fileName: "src/components/Body.js",
-                                lineNumber: 93,
+                                lineNumber: 97,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -35409,13 +35409,13 @@ const Body = ()=>{
                                 onChange: (e)=>setUserName(e.target.value)
                             }, void 0, false, {
                                 fileName: "src/components/Body.js",
-                                lineNumber: 94,
+                                lineNumber: 98,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 92,
+                        lineNumber: 96,
                         columnNumber: 9
                     }, undefined)
                 ]
@@ -35432,23 +35432,23 @@ const Body = ()=>{
                             resData: restaurant
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 108,
+                            lineNumber: 112,
                             columnNumber: 15
                         }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCardDefault.default), {
                             resData: restaurant
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 110,
+                            lineNumber: 114,
                             columnNumber: 15
                         }, undefined)
                     }, restaurant.info.id, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 104,
+                        lineNumber: 108,
                         columnNumber: 11
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 101,
+                lineNumber: 105,
                 columnNumber: 7
             }, undefined)
         ]
@@ -36821,7 +36821,7 @@ const Error = ()=>{
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                children: "Error hosche gandu!"
+                children: "There is some issue!"
             }, void 0, false, {
                 fileName: "src/components/Error.js",
                 lineNumber: 9,

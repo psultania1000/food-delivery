@@ -65,13 +65,17 @@ const Body = () => {
             className="px-4 py-1 bg-green-100 m-4 rounded-lg"
             // className="btn btn-primary"
             onClick={() => {
-              console.log("Here", { searchText });
-
               const searchedList = listOfRestaurant.filter((res) =>
                 res.info.name.toLowerCase().includes(searchText.toLowerCase())
               );
 
               setfilteredRestaurant(searchedList);
+            }}
+            onChange={() => {
+              setListOfRestaurant(
+                jsonData.data.cards[4].card.card.gridElements.infoWithStyle
+                  .restaurants
+              );
             }}>
             Search
           </button>
@@ -84,7 +88,7 @@ const Body = () => {
               newList = newList.filter(
                 (goodList) => goodList.info.avgRating > 4.3
               );
-              setListOfRestaurant(newList);
+              setfilteredRestaurant(newList);
             }}>
             Top Rated Restaurants
           </button>

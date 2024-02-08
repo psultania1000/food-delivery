@@ -24,7 +24,7 @@ const Header = () => {
         <ul className="flex p-4 m-4">
           <li className="px-4">Online Status: {onlineStatus ? "✅" : "🔴"}</li>
           <li className="px-4">
-            <Link to="/home">Home</Link>
+            <Link to="/body">Home</Link>
           </li>
           <li className="px-4">
             <Link to="/about">About Us</Link>

@@ -294,10 +294,6 @@ img, video {
   display: flex;
 }
 
-.h-28 {
-  height: 7rem;
-}
-
 .h-\[400px\] {
   height: 400px;
 }
